@@ -189,7 +189,7 @@ mpd_music_dir = ~/Music/Library
 #
 #alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
 #
-#current_item_prefix = $(yellow)$r
+current_item_prefix = $(green)$r
 #
 #current_item_suffix = $/r$(end)
 #
@@ -328,9 +328,9 @@ browser_display_mode = columns
 #
 ## Available values: artist, album_artist, date, genre, composer, performer.
 ##
-#media_library_primary_tag = artist
+media_library_primary_tag = album_artist
 #
-#media_library_albums_split_by_date = yes
+media_library_albums_split_by_date = no
 #
 ## Available values: wrapped, normal.
 ##
@@ -513,11 +513,11 @@ browser_display_mode = columns
 #
 #volume_color = default
 #
-#state_line_color = default
+# state_line_color = green
 #
 #state_flags_color = default:b
 #
-#main_window_color = yellow
+main_window_color = white
 #
 #color1 = white
 #
