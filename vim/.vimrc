@@ -1,9 +1,20 @@
 " Enable automatic indentation
 filetype plugin indent on
+
 " Enable syntax highlighting
 syntax on
-" Show line number by default
-set number
+
+" Enable hybrid line numbers
+set number relativenumber
+
+" Map registers to the system clipboard
+if has("clipboard")
+  set clipboard=unnamed " copy to the system clipboard
+
+  if has("unnamedplus") " X11 support
+    set clipboard+=unnamedplus
+  endif
+endif
 
 " Open Ranger file explorer from vim
 function RangerExplorer()
