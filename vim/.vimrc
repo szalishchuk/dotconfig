@@ -7,6 +7,9 @@ syntax on
 " Enable hybrid line numbers
 set number relativenumber
 
+" Enable highlighting of all search matches
+set hlsearch
+
 " Map registers to the system clipboard
 if has("clipboard")
   set clipboard=unnamed " copy to the system clipboard
