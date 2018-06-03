@@ -1,0 +1,32 @@
+{
+    "binary_file_patterns":
+    [
+        "dist/*",
+        "public/*",
+        "node_modules/*",
+        "coverage/*",
+        "esdoc/*",
+        "*.jpg",
+        "*.jpeg",
+        "*.png",
+        "*.gif",
+        "*.ttf",
+        "*.tga",
+        "*.dds",
+        "*.ico",
+        "*.eot",
+        "*.pdf",
+        "*.swf",
+        "*.jar",
+        "*.zip"
+    ],
+    "hot_exit": false,
+    "remember_open_files": false,
+    "color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+    "font_size": 16,
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
+    "theme": "Material-Theme.sublime-theme"
+}
