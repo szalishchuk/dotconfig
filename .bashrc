@@ -7,7 +7,7 @@ export PATH=$(brew --prefix openvpn)/sbin:$PATH
 # Set default GPG key
 export GPGKEY=E14771D03F56AF10
 # Set an alias for ncmpcpp, the acronym that I can never remember nor type in properly
-alias music=/usr/local/bin/ncmpcpp
+alias music="mpd && ncmpcpp"
 alias ranger=/Users/sviat/.config/ranger/ranger
 alias vim="mvim -v"
 alias preview=/Users/sviat/.config/bin/preview
