@@ -1,3 +1,4 @@
 yarn/global/node_modules/
 mpd/mpd.log
 mpd/mpdstate
+mpd/mpd.pid
