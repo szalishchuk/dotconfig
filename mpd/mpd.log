@@ -24184,3 +24184,9 @@ Jun 03 18:59 : client: [0] opened from [::1]:62001
 Jun 03 19:01 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
 Jun 03 19:01 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
 Jun 03 19:01 : player: played "Ed Sheeran/÷ (Deluxe)/13 - Barcelona.mp3"
+Jun 03 19:04 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Jun 03 19:04 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Jun 03 19:04 : player: played "Ed Sheeran/÷ (Deluxe)/14 - Bibia Be Ye Ye.mp3"
+Jun 03 19:07 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Jun 03 19:07 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Jun 03 19:07 : player: played "Ed Sheeran/÷ (Deluxe)/15 - Nancy Mulligan.mp3"
