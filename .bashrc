@@ -4,6 +4,9 @@
 export hosts=/private/etc/hosts
 export privalia=/Users/sviat/Projects/privalia/apps/
 export PATH=$(brew --prefix openvpn)/sbin:$PATH
+# Export MPD connection details for ncmpcpp and mpc clients to pick up
+export MPD_HOST=/Users/sviat/.config/mpd/mpd.socket
+export MPD_PORT=6600
 # Set default GPG key
 export GPGKEY=E14771D03F56AF10
 # Set an alias for ncmpcpp, the acronym that I can never remember nor type in properly
