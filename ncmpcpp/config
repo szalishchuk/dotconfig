@@ -21,7 +21,8 @@ ncmpcpp_directory = ~/.config/ncmpcpp
 #lyrics_directory = ~/.lyrics
 #
 ##### connection settings #####
-mpd_host = localhost
+# TODO: Replace hardcoded path with reference to MPD_HOST and MPD_PORT exported through ~/.bashrc
+mpd_host = "~/.config/mpd/mpd.socket"
 mpd_port = 6600
 mpd_connection_timeout = 5
 #
