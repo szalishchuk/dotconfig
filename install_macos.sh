@@ -39,6 +39,8 @@ brew install mpd # mpd, Music Player Daemon
 brew install ncmpcpp # ncmpcpp, full fledged terminal music player client app connecting to mpd
 brew install mpc # mpc, simple CLI client for controlling music playback with mpd
 brew install tmux # tmux, terminal multiplexer
+brew install pandoc # pandoc, document converter
+brew install lynx # lynx, text-based web browser
 
 
 ## Install GUI apps iTerm

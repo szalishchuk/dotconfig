@@ -25,6 +25,11 @@ function sub {
 function preview {
   open -a /Applications/Preview.app $1
 }
+## Display docs of any format inside the terminal
+doc () {
+  pandoc $1 | lynx -stdin
+}
+
 
 # Open VPN connection toolkit
 function vpn {

@@ -10,5 +10,6 @@
 ## vim editor
 ln -sf ~/.config/vim/.vimrc ~/.vimrc
 
+## TODO: declare all packages inside the array and then install them with a platform specific package manager (e.g. brew, aur)
 
 
