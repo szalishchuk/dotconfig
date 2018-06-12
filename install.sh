@@ -7,6 +7,8 @@
 
 
 # Symlinks
+## bash session
+ln -sf ~/.config/bashrc ~/.bashrc
 ## vim editor
 ln -sf ~/.config/vim/.vimrc ~/.vimrc
 
