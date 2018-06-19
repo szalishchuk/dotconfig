@@ -1,5 +1,5 @@
 #!/bin/bash
 # Set the name on the iTerm tab
-tabset --color lawngreen --title "Ranger"
+tabset --color lightgreen --title "Ranger"
 # Launch original ranger exec
 /usr/local/bin/ranger
