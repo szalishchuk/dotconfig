@@ -10,7 +10,7 @@ export MPD_PORT=6600
 # Set default GPG key
 export GPGKEY=E14771D03F56AF10
 # Set an alias for ncmpcpp, the acronym that I can never remember nor type in properly
-alias music="mpd && ncmpcpp"
+alias ncmpcpp=/Users/sviat/.config/ncmpcpp/ncmpcpp
 alias ranger=/Users/sviat/.config/ranger/ranger
 alias vim="mvim -v"
 alias preview=/Users/sviat/.config/bin/preview
