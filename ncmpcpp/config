@@ -107,7 +107,7 @@ mpd_music_dir = ~/Music/Library
 ## Time of inactivity (in seconds) after playlist highlighting will be disabled
 ## (0 = always on).
 ##
-#playlist_disable_highlight_delay = 5
+playlist_disable_highlight_delay = 0
 #
 ## Defines how long messages are supposed to be visible.
 ##
@@ -198,9 +198,10 @@ current_item_prefix = $(green)$r
 #
 #current_item_inactive_column_suffix = $/r$(end)
 #
-#now_playing_prefix = $b
+now_playing_prefix = $(green) $b
 #
-#now_playing_suffix = $/b
+now_playing_suffix = $(white)$(white)
+
 #
 #browser_playlist_prefix = "$2playlist$9 "
 #
