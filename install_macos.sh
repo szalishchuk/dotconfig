@@ -1,9 +1,6 @@
 # Ask for password upfront
 sudo -v
 
-# Versions and package names
-iTermVersion = "iTerm2-3_1_6"
-
 # Install system tools
 
 # TODO # Install XCode
@@ -26,7 +23,27 @@ if [[ "$Install_Apps" =~ ^(y|Y)$ ]]; then
   brew bundle --file=~/.config/Brewfile
 fi
 
+# Install default software package
+## Airmail 3 - email client
+## Alfred - task manager
+## Audiobook converter - Decodes DRM-protected audiobooks from Audible and other providers into mp3
+## Evernote - productivity tool
+## Fantastical 2 - calendar app
+## Google Chrome - primary web browser
+## Google Chrome Canary - primary web development browser
+## iStat Mini - Notification panel widget that shows CPU/Memory/Disk load, bandwidth usage, etc..
+## iTerm2 - terminal client
+iTermVersion = "iTerm2-3_1_6"
+curl -O https://iterm2.com/downloads/stable/$(iTermVersion).zip; unzip ./$(iTermVersion).zip; rm ./$(iTermVersion).zip; mv ./iTerm.app /Applications/iTerm.app
 
+## Microsoft Outlook - corporate email client
+## Moom - windows manager
+## VLC - video player
+## ResqueTime - time reporting tool
+## Skype - primary instant messanger
+## Skype for business - corporate instant messanger
+## Tower - GUI git client
+## Xcode - Macos development environment required for access to some of the system features
 
 
 
@@ -43,8 +60,6 @@ brew install pandoc # pandoc, document converter
 brew install lynx # lynx, text-based web browser
 
 
-## Install GUI apps iTerm
-curl -O https://iterm2.com/downloads/stable/$(iTermVersion).zip; unzip ./$(iTermVersion).zip; rm ./$(iTermVersion).zip; mv ./iTerm.app /Applications/iTerm.app
 
 
 # git vcs
@@ -56,3 +71,10 @@ curl -O https://iterm2.com/downloads/stable/$(iTermVersion).zip; unzip ./$(iTerm
 
 # System settings
 defaults write com.apple.screencapture location ~/ownCloud/Screenshots/ # Set destination for screenshot capture
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES; killall Finder # Show Full File Path in Finder
+defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}' # Add Spacers into the Dock, then do killall Dock to see them
+defaults write com.apple.Dock showhidden -bool TRUE; killall Dock # Make Hidden Apps “Hidden” in Dock
+# Dock reveal animation settings
+defaults write com.apple.dock autohide-time-modifier -float 0.12;killall Dock # Super-fast animation
+# defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock # No animation
+# defaults delete com.apple.dock autohide-time-modifier;killall Dock # Revert to default
