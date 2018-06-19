@@ -1,0 +1,5 @@
+#!/bin/bash
+# Set the name on the iTerm tab
+tabset --color turquoise
+# Launch original ranger exec
+/usr/local/bin/ncmpcpp
