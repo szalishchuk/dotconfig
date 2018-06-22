@@ -1,4 +1,4 @@
-#!/bin/node
+#!/usr/bin/env node
 
 const { exec } = require("child_process"),
       fs = require("fs"),
@@ -22,7 +22,7 @@ const options = getOptions(process.argv.slice(2));
 
 
 // Set the name on the iTerm tab
-exec("tabset --color pink");
+exec("/usr/local/bin/tabset --color pink --title `${options.account}`");
 
 // Generate a config file to be fed into the slack-term executable
 fs.writeFileSync(targetConfigFile, JSON.stringify(Object.assign({}, { "slack_token": options.token }, JSON.parse(fs.readFileSync(sourceConfigFile)))));
