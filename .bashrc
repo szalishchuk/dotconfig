@@ -15,6 +15,7 @@ alias ranger=/Users/sviat/.config/ranger/ranger
 alias vim="mvim -v"
 alias preview=/Users/sviat/.config/bin/preview
 alias setTerminalTabName=setTerminalTabName
+alias bfg="java -jar /Users/sviat/.config/utils/bfg.jar" # BFG Repo-Cleaner, removes large or troublesome blobs like git-filter-branch does, but faster.
 
 # Functions
 ## Sublime text
