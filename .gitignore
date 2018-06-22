@@ -3,3 +3,4 @@ mpd/mpd.log
 mpd/mpdstate
 mpd/mpd.pid
 mpd/mpd.db
+slack-term/com.config.json

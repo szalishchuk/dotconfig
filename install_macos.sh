@@ -42,8 +42,11 @@ curl -O https://iterm2.com/downloads/stable/$(iTermVersion).zip; unzip ./$(iTerm
 ## ResqueTime - time reporting tool
 ## Skype - primary instant messanger
 ## Skype for business - corporate instant messanger
+## Slack-term - slack terminal client
+curl -O https://github.com/erroneousboat/slack-term/releases/download/v0.4.0/slack-term-darwin-amd64 /usr/local/bin/slack-term; # To be tested
 ## Tower - GUI git client
 ## Xcode - Macos development environment required for access to some of the system features
+
 
 
 

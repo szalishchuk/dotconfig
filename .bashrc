@@ -16,6 +16,7 @@ alias vim="mvim -v"
 alias preview=/Users/sviat/.config/bin/preview
 alias setTerminalTabName=setTerminalTabName
 alias bfg="java -jar /Users/sviat/.config/utils/bfg.jar" # BFG Repo-Cleaner, removes large or troublesome blobs like git-filter-branch does, but faster.
+alias slack-term="node /Users/sviat/.config/slack-term/slack-term"
 
 # Functions
 ## Sublime text

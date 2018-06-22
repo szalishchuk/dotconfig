@@ -1,0 +1,31 @@
+#!/bin/node
+
+const { exec } = require("child_process"),
+      fs = require("fs"),
+      sourceConfigFile = "/Users/sviat/.config/slack-term/config.json",
+      targetConfigFile = "/Users/sviat/.config/slack-term/com.config.json";
+
+// Retrive options provided to the process
+// Expecting the arguments to be provided in the following way:
+// account=projectX token=XXXXX=XXXXXXX
+function getOptions(args) {
+  let options = {};
+  if(args.length === 0) {
+    console.log("No options provided, quiting...");
+    process.exit();
+  }
+  args.forEach((item) => options[item.split("=")[0]] = item.split("=")[1] );
+  return options;
+}
+
+const options = getOptions(process.argv.slice(2));
+
+
+// Set the name on the iTerm tab
+exec("tabset --color pink");
+
+// Generate a config file to be fed into the slack-term executable
+fs.writeFileSync(targetConfigFile, JSON.stringify(Object.assign({}, { "slack_token": options.token }, JSON.parse(fs.readFileSync(sourceConfigFile)))));
+
+// Launch the GO executable providing it the local config file 
+exec("/usr/local/bin/slack-term -config /Users/sviat/.config/slack-term/com.config.json");
