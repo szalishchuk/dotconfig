@@ -1,1 +1,0 @@
-/Users/sviat/.config/.bashrc
