@@ -1,5 +1,9 @@
 #!/bin/bash
-# Set the name on the iTerm tab
-tabset --color turquoise
-# Launch original ranger exec
-/usr/local/bin/ncmpcpp
+
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  # Launch original ncmpcpp exec
+  /usr/bin/ncmpcpp
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  # Set the name on the iTerm tab
+  tabset --color turquoise
+fi

@@ -1,5 +1,11 @@
 #!/bin/bash
-# Set the name on the iTerm tab
-tabset --color lightgreen --title "Ranger"
-# Launch original ranger exec
-/usr/local/bin/ranger
+
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  # Launch original ranger exec
+  /usr/bin/ranger
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  # Set the name on the iTerm tab
+  tabset --color lightgreen --title "Ranger"
+  # Launch original ranger exec
+  /usr/local/bin/ranger
+fi
