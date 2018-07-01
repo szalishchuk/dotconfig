@@ -4,3 +4,13 @@ mpd/mpdstate
 mpd/mpd.pid
 mpd/mpd.db
 slack-term/com.config.json
+Slack
+autostart
+chromium
+*.tdb
+skypeforlinux
+pulse/cookie
+gtk-3.0
+menus
+QtProject.conf
+dconf/user
