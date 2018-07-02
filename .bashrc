@@ -1,11 +1,13 @@
 #!/bin/bash
 
 ###---Global variables---###
+  export XDG_CONFIG_HOME=$HOME/.config # Dotconfig dir
   export EDITOR=vim # Default text editor
   export GPGKEY=E14771D03F56AF10 # Default public GPG key
 
   # Export MPD connection details for ncmpcpp and mpc clients to pick up
-  export MPD_HOST=/Users/sviat/.config/mpd/mpd.socket
+  export MPD_HOST=$HOME/.config/mpd/mpd.socket
+
   export MPD_PORT=6600
   export hosts=/private/etc/hosts
 

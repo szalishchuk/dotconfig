@@ -54,6 +54,20 @@ yaourt \
   ephifonts 20180416-2 # A collection of free fonts including Helvetica, Futura and Gotham (ephifonts.com)
 
 
+###---Edits to fstab---###
+
+# TODO: Append this to /etc/fstab
+  ## Mounting SERVER as shared drive through smb
+  //192.168.1.137/Home /home/sviat/SERVER/Home cifs credentials=/home/sviat/.config/credentials/SERVER.smb,uid=sviat,x-systemd.automount 0 0
+  //192.168.1.137/Audiobooks /home/sviat/SERVER/Audiobooks cifs credentials=/home/sviat/.config/credentials/SERVER.smb,uid=sviat,x-systemd.automount 0 0
+  //192.168.1.137/Backups /home/sviat/SERVER/Backups cifs credentials=/home/sviat/.config/credentials/SERVER.smb,uid=sviat,x-systemd.automount 0 0
+  //192.168.1.137/Music /home/sviat/SERVER/Music cifs credentials=/home/sviat/.config/credentials/SERVER.smb,uid=sviat,x-systemd.automount 0 0
+  //192.168.1.137/Photos /home/sviat/SERVER/Photos cifs credentials=/home/sviat/.config/credentials/SERVER.smb,uid=sviat,x-systemd.automount 0 0
+  //192.168.1.137/Tools /home/sviat/SERVER/Tools cifs credentials=/home/sviat/.config/credentials/SERVER.smb,uid=sviat,x-systemd.automount 0 0
+  //192.168.1.137/Videos /home/sviat/SERVER/Videos cifs credentials=/home/sviat/.config/credentials/SERVER.smb,uid=sviat,x-systemd.automount 0 0
+  //192.168.1.137/Web /home/sviat/SERVER/Web cifs credentials=/home/sviat/.config/credentials/SERVER.smb,uid=sviat,x-systemd.automount 0 0
+# END OF TODO
+
 ###---Symbolic links----###
 
 ln -sf $HOME/.config/fonts/fonts.conf /etc/fonts/local.conf # Attach overrides for system-wide fonts configuration
@@ -63,3 +77,7 @@ sudo ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d
 sudo ln -s /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d
 sudo ln -s /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d
 
+
+###---Enable startup items with systemd---###
+
+systemctl --user enable mpd.service # Start Music Player Daemon
