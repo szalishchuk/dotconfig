@@ -1,28 +1,48 @@
 ###---Basic Definitions---###
   ###---Variables---###
-    ## Default terminal:
-    set $term --no-startup-id urxvt
 
-    # Default workspaces:
-    set $ws1 "1"
-    set $ws2 "2"
-    set $ws3 "3"
-    set $ws4 "4"
-    set $ws5 "5"
-    set $ws6 "6"
-    set $ws7 "7"
-    set $ws8 "8"
-    set $ws9 "9"
-    set $ws10 "10"
+    ###---Monitors and workspaces---###
 
-    # Default colors:
-    set $green      #99f99c
-    set $darkgreen  #008c00
-    set $white      #ffffff
-    set $darkwhite  #a8a19f
-    set $grey       #bdbebc
-    set $darkgrey   #8f8f8d
-    set $black      #000000
+      # Define outputs as monitors
+      set $monitor1 DP-1
+      set $monitor2 HDMI-0
+
+      # Define workspaces
+      set $ws1 "A1"
+      set $ws2 "B1"
+      set $ws3 "C1"
+      set $ws4 "D1"
+      set $ws5 "E1"
+      set $ws6 "A2"
+      set $ws7 "B2"
+      set $ws8 "C2"
+      set $ws9 "D2"
+      set $ws0 "E2"
+
+      # Assign workspaces to monitors 
+      workspace $ws1 output $monitor1
+      workspace $ws2 output $monitor1
+      workspace $ws3 output $monitor1
+      workspace $ws4 output $monitor1
+      workspace $ws5 output $monitor1
+      workspace $ws6 output $monitor2
+      workspace $ws7 output $monitor2
+      workspace $ws8 output $monitor2
+      workspace $ws9 output $monitor2
+      workspace $ws0 output $monitor2
+
+    ###---Colors---###
+      set $green      #99f99c
+      set $darkgreen  #008c00
+      set $white      #ffffff
+      set $darkwhite  #a8a19f
+      set $grey       #bdbebc
+      set $darkgrey   #8f8f8d
+      set $black      #000000
+
+    ###---Apps---### 
+      # Terminal
+      set $term --no-startup-id urxvt 
 
   ###---Preferences---###
     # Set the modifier key
@@ -97,16 +117,11 @@
     bindsym $mod+Right focus right
     
     # switch to workspace
-    bindsym $mod+1 workspace $ws1
-    bindsym $mod+2 workspace $ws2
-    bindsym $mod+3 workspace $ws3
-    bindsym $mod+4 workspace $ws4
-    bindsym $mod+5 workspace $ws5
-    bindsym $mod+6 workspace $ws6
-    bindsym $mod+7 workspace $ws7
-    bindsym $mod+8 workspace $ws8
-    bindsym $mod+9 workspace $ws9
-    bindsym $mod+0 workspace $ws10
+    bindsym $mod+1 workspace $ws1, workspace $ws6
+    bindsym $mod+2 workspace $ws2, workspace $ws7
+    bindsym $mod+3 workspace $ws3, workspace $ws8
+    bindsym $mod+4 workspace $ws4, workspace $ws9
+    bindsym $mod+5 workspace $ws5, workspace $ws0
 
   ###---Move windows---###
     # move focused window
@@ -131,7 +146,7 @@
     bindsym $mod+Shift+7 move container to workspace $ws7
     bindsym $mod+Shift+8 move container to workspace $ws8
     bindsym $mod+Shift+9 move container to workspace $ws9
-    bindsym $mod+Shift+0 move container to workspace $ws10
+    bindsym $mod+Shift+0 move container to workspace $ws0
 
 
   ###---Resize windows---###
@@ -162,6 +177,15 @@
 
     # Activate resize mode with:
     bindsym $mod+r mode "resize"
+
+
+###---Keyboard layout bindings---###
+  bindsym $alt+Shift+1 exec setxkbmap -layout us # English
+  bindsym $alt+Shift+2 exec setxkbmap -layout ua # Ukrainian
+  bindsym $alt+Shift+3 exec setxkbmap -layout ru # Russian
+  bindsym $alt+Shift+4 exec setxkbmap -layout pl # Polish
+  bindsym $alt+Shift+5 exec setxkbmap -layout es # Spanish
+
 
 ###---System bindings---###
 
@@ -204,7 +228,7 @@
 
 ###---Starting External Scripts---###
   # Start xrandr to configure multi-monitor setup
-  exec --no-startup-id xrandr --output HDMI-0 --right-of DP-1 --auto
+  exec --no-startup-id xrandr --output $monitor2 --right-of $monitor1 --auto
 
   # Load configuration from .Xresources
   exec_always --no-startup-id xrdb $HOME/.config/.Xresources;
