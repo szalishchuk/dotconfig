@@ -10,7 +10,7 @@ pacman -S \
   rofi # a window switcher, application launcher and dmenu replacement
   git # git client
   gvim # On native vim in Arch there is no support for X so the +clipboard feature is missing, replace it with gvim.
-
+  nodejs # NodeJS runtime
   pulseaudio # General-purpose sound server
   pulseaudio-alsa # ALSA Configuration for PulseAudio
   pulseaudio-bluetooth # Bluetooth support for PulseAudio
@@ -25,6 +25,8 @@ pacman -S \
   lastpass-cli # lastpass terminal client
   cifs-utils # helps with mounting smb shares
   vlc # primary GUI-based media player
+  highlight # syntax highlighting engine used in ranger's preview
+  mutt # terminal email client
 
 
 ###---Install yaourt, AUR client---###
