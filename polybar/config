@@ -55,9 +55,9 @@ font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = bspwm i3
+modules-left = bspwm i3 xwindow
 modules-center = 
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = powermenu filesystem xbacklight alsa pulseaudio memory cpu battery temperature xkeyboard eth wlan date
 
 tray-position = right
 tray-padding = 2
@@ -80,7 +80,10 @@ cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+label = %title%
+label-maxlen = 50
+format-foreground=${colors.foreground}
+format-background=${colors.background}
 
 [module/xkeyboard]
 type = internal/xkeyboard
