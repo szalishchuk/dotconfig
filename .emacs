@@ -40,6 +40,9 @@
 				  directory org-agenda-file-regexp))
 			       '("~/ownCloud/Projects"))))
 
+;; Set default location for capturing misc notes
+(setq org-default-notes-file "~/ownCloud/!nbox/index.txt")
+
 ;; Show all TODOs that haven't been scheduled yet
 (setq org-agenda-custom-commands
       '(("c" . "Custom Views")
