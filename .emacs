@@ -24,7 +24,7 @@
 
 ;; Define statuses for TODO items
 (setq org-todo-keywords
-      '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
+      '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE" "CANCELLED")))
 
 ;; Define common tags
 (setq org-tag-alist '(("@work" . ?w) ("@home" . ?h) ))
@@ -38,7 +38,7 @@
 			       (lambda (directory)
 				 (directory-files-recursively
 				  directory org-agenda-file-regexp))
-			       '("~/ownCloud/Projects"))))
+			       '("~/ownCloud/Projects" "~/ownCloud/!nbox"))))
 
 ;; Set default location for capturing misc notes
 (setq org-default-notes-file "~/ownCloud/!nbox/index.txt")
