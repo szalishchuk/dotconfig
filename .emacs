@@ -1,26 +1,46 @@
 ;; Enable package management
 (require 'package)
+(package-initialize)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+
+;; Enable tab in normal mode
+(setq evil-want-C-i-jump nil)
+
+;; Addresses the mess with clipboard management, including evil mode with emacs -nw
+(xclip-mode 1)
+
+;; Enable evil-mode
+(require 'evil)
+(evil-mode 1)
 
 ;; Enable org-mode
 (require 'org)
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 (add-to-list 'auto-mode-alist '("\\.txt$" . org-mode))
 
+;; Configure agenda export settings
+(setq org-agenda-exporter-settings
+      '((ps-number-of-columns 2)
+        (ps-landscape-mode t)
+        (org-agenda-add-entry-text-maxlines 5)
+        (htmlize-output-type 'css)))
+
+;; (setq org-agenda-custom-commands
+;;       '(("X" agenda ""
+;;          ((ps-number-of-columns 2)
+;;           (ps-landscape-mode t)
+;;           (org-agenda-prefix-format " [ ] ")
+;;           (org-agenda-with-colors nil)
+;;           (org-agenda-remove-tags t))
+;;          ("theagenda.ps"))))
+
+
+
 ;; Enable wrapping of long-lines
 (setq org-startup-truncated nil)
 
-;; Enable copy into system clipboard with visual select
-(setq x-select-enable-clipboard t)
-(defun copy-from-osx ()
-  (shell-command-to-string "pbpaste"))
-(defun paste-to-osx (text &optional push)
-  (let ((process-connection-type nil))
-    (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
-      (process-send-string proc text)
-      (process-send-eof proc))))
-(setq interprogram-cut-function 'paste-to-osx)
-(setq interprogram-paste-function 'copy-from-osx)
+;; Hide markers that are used for rich text microformats (e.g. bold/italic/code/date/etc..)
+(setq org-hide-emphasis-markers t)
 
 ;; Define statuses for TODO items
 (setq org-todo-keywords
@@ -44,14 +64,19 @@
 (setq org-default-notes-file "~/ownCloud/!nbox/index.txt")
 
 ;; Show all TODOs that haven't been scheduled yet
+;; (setq org-agenda-custom-commands
+;;       '(("c" . "Custom Views")
+;;         ("cu" "Unscheduled TODOs"
+;;          ((todo ""
+;;                 ((org-agenda-overriding-header "\nUnscheduled TODO")
+;;                  (org-agenda-skip-function '(org-agenda-skip-entry-if 'timestamp)))))
+;;          nil
+;;          nil)))
+
 (setq org-agenda-custom-commands
-      '(("c" . "Custom Views")
-        ("cu" "Unscheduled TODOs"
-         ((todo ""
-                ((org-agenda-overriding-header "\nUnscheduled TODO")
-                 (org-agenda-skip-function '(org-agenda-skip-entry-if 'timestamp)))))
-         nil
-         nil)))
+      '(("X" agenda "" nil ("~/ownCloud/!nbox/agenda.html"))
+        ("Y" alltodo "" nil ("~/ownCloud/!nbox/todo.html"))))
+
 
 ;; Force DONE items to show up in the agenda view
 (setq org-agenda-log-mode-items '(closed clock state))
@@ -81,7 +106,6 @@
 (add-to-list 'custom-theme-load-path "~/.config/themes/") 
 
 
-(package-initialize)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -89,7 +113,8 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
- '(custom-enabled-themes (quote (misterioso))))
+ '(custom-enabled-themes (quote (misterioso)))
+ '(package-selected-packages (quote (xclip evil htmlize))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
