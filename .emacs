@@ -3,86 +3,20 @@
 (package-initialize)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 
-;; Enable tab in normal mode
-(setq evil-want-C-i-jump nil)
+;; Line numbers settings
+(load-file "~/.config/emacs/linum.el")
 
-;; Addresses the mess with clipboard management, including evil mode with emacs -nw
-(xclip-mode 1)
+;; Enable evil-mode and related configuration
+(load-file "~/.config/emacs/evil.el")
 
-;; Enable evil-mode
-(require 'evil)
-(evil-mode 1)
-
-;; Enable org-mode
-(require 'org)
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
-(add-to-list 'auto-mode-alist '("\\.txt$" . org-mode))
-
-;; Configure agenda export settings
-(setq org-agenda-exporter-settings
-      '((ps-number-of-columns 2)
-        (ps-landscape-mode t)
-        (org-agenda-add-entry-text-maxlines 5)
-        (htmlize-output-type 'css)))
-
-;; (setq org-agenda-custom-commands
-;;       '(("X" agenda ""
-;;          ((ps-number-of-columns 2)
-;;           (ps-landscape-mode t)
-;;           (org-agenda-prefix-format " [ ] ")
-;;           (org-agenda-with-colors nil)
-;;           (org-agenda-remove-tags t))
-;;          ("theagenda.ps"))))
-
-
+;; Enable org-mode and related configuration
+(load-file "~/.config/emacs/org.el")
 
 ;; Enable wrapping of long-lines
 (setq org-startup-truncated nil)
 
 ;; Hide markers that are used for rich text microformats (e.g. bold/italic/code/date/etc..)
 (setq org-hide-emphasis-markers t)
-
-;; Define statuses for TODO items
-(setq org-todo-keywords
-      '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE" "CANCELLED")))
-
-;; Define common tags
-(setq org-tag-alist '(("@work" . ?w) ("@home" . ?h) ))
-
-;; Use .txt instead of the default .org
-(setq org-agenda-file-regexp "\\`[^.].*\\.txt\\'")
-
-;; Recursively add all files from target directory to agenda
-(setq org-agenda-files (apply 'append
-			      (mapcar
-			       (lambda (directory)
-				 (directory-files-recursively
-				  directory org-agenda-file-regexp))
-			       '("~/ownCloud/Projects" "~/ownCloud/!nbox"))))
-
-;; Set default location for capturing misc notes
-(setq org-default-notes-file "~/ownCloud/!nbox/index.txt")
-
-;; Show all TODOs that haven't been scheduled yet
-;; (setq org-agenda-custom-commands
-;;       '(("c" . "Custom Views")
-;;         ("cu" "Unscheduled TODOs"
-;;          ((todo ""
-;;                 ((org-agenda-overriding-header "\nUnscheduled TODO")
-;;                  (org-agenda-skip-function '(org-agenda-skip-entry-if 'timestamp)))))
-;;          nil
-;;          nil)))
-
-(setq org-agenda-custom-commands
-      '(("X" agenda "" nil ("~/ownCloud/!nbox/agenda.html"))
-        ("Y" alltodo "" nil ("~/ownCloud/!nbox/todo.html"))))
-
-
-;; Force DONE items to show up in the agenda view
-(setq org-agenda-log-mode-items '(closed clock state))
-
-;; Set a key binding for agenda view
-(global-set-key "\C-ca" 'org-agenda)
 
 ;; Disable the splash screen (to enable it again, replace the t with 0)
 (setq inhibit-splash-screen t)
