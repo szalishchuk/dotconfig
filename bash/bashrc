@@ -1,0 +1,45 @@
+#!/bin/bash
+
+###---Global variables---###
+  export XDG_CONFIG_HOME=$HOME/.config # Dotconfig dir
+  export EDITOR=vim # Default text editor
+  export GPGKEY=E14771D03F56AF10 # Default public GPG key
+
+  # Export MPD connection details for ncmpcpp and mpc clients to pick up
+  export MPD_HOST=$HOME/.config/mpd/mpd.socket
+
+  export MPD_PORT=6600
+  export hosts=/private/etc/hosts
+
+  # TODO:
+  # export PATH=$(brew --prefix openvpn)/sbin:$PATH
+
+  # TODO:
+  export NVM_DIR="/Users/sviat/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+
+###---Aliases---###
+
+  # Set an alias for ncmpcpp, the acronym that I can never remember nor type in properly
+  alias ncmpcpp=$HOME/.config/ncmpcpp/ncmpcpp
+  alias ranger=$HOME/.config/ranger/ranger
+  # TODO
+  # alias vim="mvim -v"
+  alias preview=/Users/sviat/.config/bin/preview
+  alias setTerminalTabName=setTerminalTabName
+  alias bfg="java -jar /Users/sviat/.config/utils/bfg.jar" # BFG Repo-Cleaner, removes large or troublesome blobs like git-filter-branch does, but faster.
+  alias slack-term="node /Users/sviat/.config/slack-term/slack-term"
+  alias archey3="archey3 --config $HOME/.config/archey3.cfg" # Output Arch Linux logo and system information
+  alias dmenu="rofi -dmenu"
+
+###---Functions---###
+  ## Sublime text
+  function sub {
+    open -a /Applications/Sublime\ Text.app $1
+  }
+  ## Display docs of any format inside the terminal
+  doc () {
+    pandoc $1 | lynx -stdin
+  }
+
