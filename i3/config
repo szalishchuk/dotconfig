@@ -204,12 +204,14 @@
     bindsym $alt+space exec "rofi -modi drun -show drun"
     # Switch to a window
     bindsym $alt+Tab exec "rofi -modi window -show window"
+    # Show HUD-menu
+    bindsym $alt+1 exec $HOME/.config/scripts/i3-hud-menu.py
     # Search through a clipboard
-    bindsym $alt+1 exec "rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'"
+    bindsym $alt+2 exec "rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'"
     # Search through bookmarks
-    bindsym $alt+2 exec "buku_run"
+    bindsym $alt+3 exec "buku_run"
     # Start ssh session
-    bindsym $alt+3 exec "rofi -modi ssh -show ssh"
+    bindsym $alt+4 exec "rofi -modi ssh -show ssh"
 
     # List available wifi networks
     # bindsym $alt+3 exec "tty-pipe nmcli device wifi | out2html -p | rofi -dmenu -markup-rows"
@@ -250,5 +252,8 @@
 
   # Start clipboard manager's daemon
   exec_always --no-startup-id greenclip daemon
+
+  # Start i3-appmenu-service to extact menus from all desktop apps
+  exec_always --no-startup-id exec $HOME/.config/scripts/i3-appmenu-service.py
 
 
