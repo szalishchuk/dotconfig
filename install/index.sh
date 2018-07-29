@@ -26,3 +26,7 @@ ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d
 ln -s /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d
 ln -s /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d
 
+
+# i3 config
+ln -sf ~/.config/i3/laptop.config ~/.config/i3/config
+# TODO: consider passing down the device variable and then creating different symlinks based on it's value
