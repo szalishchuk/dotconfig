@@ -1,9 +1,10 @@
-
 ;; Enable org-mode
 (require 'org)
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 (add-to-list 'auto-mode-alist '("\\.txt$" . org-mode))
 
+;; Inline images configuration
+(load-file "~/.config/emacs/org-images.el")
 
 ;; Set a key binding for agenda view
 (global-set-key "\C-ca" 'org-agenda)

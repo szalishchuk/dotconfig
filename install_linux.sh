@@ -11,6 +11,8 @@ pacman -S \
   git # git client
   gvim # On native vim in Arch there is no support for X so the +clipboard feature is missing, replace it with gvim.
   nodejs # NodeJS runtime
+  python # Python runtime
+  python-dbus # Python binding for dbus
   pulseaudio # General-purpose sound server
   pulseaudio-alsa # ALSA Configuration for PulseAudio
   pulseaudio-bluetooth # Bluetooth support for PulseAudio
@@ -27,7 +29,19 @@ pacman -S \
   vlc # primary GUI-based media player
   highlight # syntax highlighting engine used in ranger's preview
   mutt # terminal email client
-
+  htop # interactive process viewer
+  unzip # extract contents of zip archives
+  makemkv # rip dvd and blu-ray discs
+  libbluray # ...
+  libaacs # ...
+  poppler # PDF rendering library
+  okular # PDF document viewer
+  imagemagick # create, edit, compose, or convert bitmap images
+  perl-image-exiftool # Reader and rewriter of EXIF informations that supports raw files
+  w3m # terminal web browser
+  ffmpegthumbnailer # convert first frame of the video into an image to diplay as thumbnail
+  xclip # interface on top of X11 clipboard
+  openssl # full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols
 
 ###---Install yaourt, AUR client---###
 # Make sure the standard repositories are up-to-date for anything that package-query or yaourt might need
@@ -54,7 +68,20 @@ yaourt \
   buku_run #rofi frontend for buku
   ttf-ms-fonts # freely available MS fonts, including Times New Roman, Trebuchet MS, Webdings, Verdana, Andale Mono, Arial, Arial Black, Impact, Comic Sans MS, Courier New and Georgia
   ephifonts 20180416-2 # A collection of free fonts including Helvetica, Futura and Gotham (ephifonts.com)
+  minetime # GUI calendar with Exchange, Google and CalDav integrations
+  mailspring # GUI email app with Exchange and Google integrations
+  appmenu-qt4 # Export Qt4 applications menus over D-Bus
+  appmenu-gtk-module # Provides unity-gtk-module
+  xprop
+  python-gobject
+  aacskeys # Necessary to decrypt BluRay drives with ~/.config/aacs/KEYDB.cfg
+  rxvt-unicode-pixbuf # Unicode enabled rxvt-clone terminal emulator (urxvt), with support for custom icons and backgrounds
+  tipp10 # Typing tutor GUI app
+  viber # primary IM
 
+###---Download sources for dependencies that aren't available in pkg repos---###
+# TODO: download https://github.com/RafaelBocquet/i3-hud-menu/blob/master/i3-hud-menu.py
+# TODO: download https://github.com/RafaelBocquet/i3-hud-menu/blob/master/i3-appmenu-service.py
 
 ###---Edits to fstab---###
 

@@ -1,8 +1,15 @@
+aacs/
+gconf/
+gtk-2.0/
+Tom Thielicke IT Solutions/
+Trolltech.conf
 yarn/global/node_modules/
 mpd/mpd.log
 mpd/mpdstate
 mpd/mpd.pid
 mpd/mpd.db
+mpd/mpd.state
+mpd/sticker.sql
 slack-term/com.config.json
 Slack
 autostart
@@ -15,7 +22,9 @@ menus
 QtProject.conf
 dconf/user
 credentials
-mpd/mpd.state
-mpd/sticket.sql
 systemd
 vlc
+okularrc
+Mailspring/
+MineTime/
+vlc/
