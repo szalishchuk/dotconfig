@@ -6,8 +6,17 @@
 # (e.g. availability of a package manager, dotfiles of a specific app to symlink, etc..)
 
 # Symlinks
+## Xorg
+ln -sf ~/.config/xorg/xinitrc ~/.xinitrc
+ln -sf ~/.config/xorg/Xresources ~/.Xresources
+ln -sf ~/.config/xorg/Xmodmap ~/.Xmodmap
+
+
 ## bash session
-ln -sf ~/.config/bashrc ~/.bashrc
+ln -sf ~/.config/bash/bash_profile ~/.bash_profile
+ln -sf ~/.config/bash/bashrc ~/.bashrc
+
+
 ## vim editor
 ln -sf ~/.config/vim/.vimrc ~/.vimrc
 # Attach overrides for system-wide fonts configuration

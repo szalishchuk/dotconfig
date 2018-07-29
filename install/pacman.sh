@@ -25,7 +25,6 @@
 # mutt - terminal email client
 # htop - interactive process viewer
 # unzip - extract contents of zip archives
-# makemkv - rip dvd and blu-ray discs
 # libbluray - ...
 # libaacs - ...
 # poppler - PDF rendering library
@@ -37,6 +36,6 @@
 # xclip - interface on top of X11 clipboard
 # openssl - full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols
 
-pacman -S compton ranger rofi git gvim nodejs python python-dbus pulseaudio pulseaudio-alsa pulseaudio-bluetooth mpd mpc ncmpcpp feh ttf-dejavu chromium libgnome-keyring lastpass-cli cifs-utils vlc highlight mutt htop unzip makemkv libbluray libaacs poppler okular imagemagick perl-image-exiftool w3m ffmpegthumbnailer xclip openssl
+pacman -S compton ranger rofi git gvim nodejs python python-dbus pulseaudio pulseaudio-alsa pulseaudio-bluetooth mpd mpc ncmpcpp feh ttf-dejavu chromium libgnome-keyring lastpass-cli cifs-utils vlc highlight mutt htop unzip libbluray libaacs poppler okular imagemagick perl-image-exiftool w3m ffmpegthumbnailer xclip openssl
 
 
