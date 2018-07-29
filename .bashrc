@@ -31,6 +31,7 @@
   alias bfg="java -jar /Users/sviat/.config/utils/bfg.jar" # BFG Repo-Cleaner, removes large or troublesome blobs like git-filter-branch does, but faster.
   alias slack-term="node /Users/sviat/.config/slack-term/slack-term"
   alias archey3="archey3 --config $HOME/.config/archey3.cfg" # Output Arch Linux logo and system information
+  alias dmenu="rofi -dmenu"
 
 ###---Functions---###
   ## Sublime text
