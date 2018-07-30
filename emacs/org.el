@@ -18,7 +18,7 @@
 			       (lambda (directory)
 				 (directory-files-recursively
 				  directory org-agenda-file-regexp))
-			       '("~/ownCloud/Projects" "~/ownCloud/!nbox"))))
+			       '("~/ownCloud"))))
 
 
 
