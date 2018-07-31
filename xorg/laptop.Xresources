@@ -1,4 +1,5 @@
 !!!---Resolution and scaling---!!!
+*.dpi: 220
 Xft.dpi: 220
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
