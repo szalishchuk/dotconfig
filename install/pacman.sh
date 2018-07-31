@@ -35,7 +35,9 @@
 # ffmpegthumbnailer - convert first frame of the video into an image to diplay as thumbnail
 # xclip - interface on top of X11 clipboard
 # openssl - full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols
+# emacs - primary text editor
+# firefox - primary web browser
 
-pacman -S compton ranger rofi git gvim nodejs python python-dbus pulseaudio pulseaudio-alsa pulseaudio-bluetooth mpd mpc ncmpcpp feh ttf-dejavu chromium libgnome-keyring lastpass-cli cifs-utils vlc highlight mutt htop unzip libbluray libaacs poppler okular imagemagick perl-image-exiftool w3m ffmpegthumbnailer xclip openssl
+pacman -S compton ranger rofi git gvim nodejs python python-dbus pulseaudio pulseaudio-alsa pulseaudio-bluetooth mpd mpc ncmpcpp feh ttf-dejavu chromium libgnome-keyring lastpass-cli cifs-utils vlc highlight mutt htop unzip libbluray libaacs poppler okular imagemagick perl-image-exiftool w3m ffmpegthumbnailer xclip openssl emacs firefox
 
 
