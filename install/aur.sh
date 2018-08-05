@@ -18,5 +18,6 @@
 # rxvt-unicode-pixbuf - Unicode enabled rxvt-clone terminal emulator (urxvt), with support for custom icons and backgrounds
 # tipp10 - Typing tutor GUI app
 # viber - primary IM
+# wicd-patched - wicd fork that contain fixes for wicd-curses UI making it more stable
 
-yaourt polybar-git owncloud-client-git ttf-monaco archey3 rofi-greenclip buku buku_run ttf-ms-fonts ephifonts minetime mailspring appmenu-qt4 appmenu-gtk-module xprop python-gobject aacskeys rxvt-unicode-pixbuf tipp10 viber
+yaourt polybar-git owncloud-client-git ttf-monaco archey3 rofi-greenclip buku buku_run ttf-ms-fonts ephifonts minetime mailspring appmenu-qt4 appmenu-gtk-module xprop python-gobject aacskeys rxvt-unicode-pixbuf tipp10 viber wicd-patched
