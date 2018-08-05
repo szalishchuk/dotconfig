@@ -2,6 +2,8 @@
 (require 'org)
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 (add-to-list 'auto-mode-alist '("\\.txt$" . org-mode))
+;; Enable habits tracking
+(add-to-list 'org-modules 'org-habit)
 
 ;; Inline images configuration
 (load-file "~/.config/emacs/org-images.el")
@@ -68,6 +70,9 @@
 
 ;; Force DONE items to show up in the agenda view
 (setq org-agenda-log-mode-items '(closed clock state))
+
+;; Prompt for a note when resolving repeated events
+(setq org-log-repeat 'note)
 
 ;; Define common tags
 (setq org-tag-alist '(("@work" . ?w) ("@home" . ?h) ))
