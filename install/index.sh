@@ -1,7 +1,11 @@
 #/bin/bash
 
-# This executable contains system agnostic configuration settings
-# and is meant to be run before the system specific one (mac or linux)
-# have already installed all system dependencies that this one may rely on
-# (e.g. availability of a package manager, dotfiles of a specific app to symlink, etc..)
+# Create .config folder in $HOME directory and populate it with sviatco/dotconfig settings
+cd $HOME;
+mkdir .config && $1;
+git clone https://github.com/sviatco/dotconfig
+
+# Create a public rsa key
+ssh-keygen
+
 

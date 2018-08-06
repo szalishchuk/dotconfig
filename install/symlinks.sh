@@ -30,5 +30,8 @@ sudo ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d
 sudo ln -s /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d
 sudo ln -s /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d
 
-
+# Enable userChrome.css in Firefox
+# TODO, determine how to automatically fetch profileId and inject into the script
+mkdir ~/.mozilla/firefox/${profileId}/chrome
+ln -sf ~/.config/firefox/userChrome.css ~/.mozilla/firefox/${profileId}/chrome/userChrome.css
 
