@@ -20,5 +20,7 @@
 # viber - primary IM
 # wicd-patched - wicd fork that contain fixes for wicd-curses UI making it more stable
 # light - Light is a program to control backlight controllers
+# teiler-git - a little screenshot tool written in bash
+# imgurbash2 - A small shell script that uploads/deletes images to/from imgur.com
 
-yaourt -S polybar-git owncloud-client-git ttf-monaco archey3 rofi-greenclip buku buku_run ttf-ms-fonts ephifonts minetime mailspring appmenu-qt4 appmenu-gtk-module xprop python-gobject aacskeys rxvt-unicode-pixbuf tipp10 viber wicd-patched light
+yaourt -S polybar-git owncloud-client-git ttf-monaco archey3 rofi-greenclip buku buku_run ttf-ms-fonts ephifonts minetime mailspring appmenu-qt4 appmenu-gtk-module xprop python-gobject aacskeys rxvt-unicode-pixbuf tipp10 viber wicd-patched light teiler-git imgurbash2
