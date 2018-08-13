@@ -24,6 +24,8 @@
   # Set an alias for ncmpcpp, the acronym that I can never remember nor type in properly
   alias ncmpcpp=$HOME/.config/ncmpcpp/ncmpcpp
   alias ranger=$HOME/.config/ranger/ranger
+  # Needed to simplify the process of copying STDOUT into system clipboard (e.g. ls | xclip)
+  alias xclip='xclip -selection c'
   # TODO
   # alias vim="mvim -v"
   alias preview=/Users/sviat/.config/bin/preview
