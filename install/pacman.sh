@@ -40,5 +40,9 @@
 # zip - utilitiy to compress to and extract from zip archives
 # dhclient - alternative to dhcpcd allowing system to request the ip address after connecting to the network
 # xorg-xinput - Small commandline tool to configure devices
+# gdb - ancient and well-tested debugger
+# strace - debugs application dependencies
+# intel-ucode - Microcode update files for Intel CPUs
+# patchelf - modify properties of ELF executables
 
-pacman -S compton ranger rofi git gvim nodejs python python-dbus pulseaudio pulseaudio-alsa pulseaudio-bluetooth mpd mpc ncmpcpp feh ttf-dejavu chromium libgnome-keyring lastpass-cli cifs-utils vlc highlight mutt htop unzip libbluray libaacs poppler okular imagemagick perl-image-exiftool w3m ffmpegthumbnailer xclip openssl emacs firefox zip dhclient xorg-xinput
+pacman -S compton ranger rofi git gvim nodejs python python-dbus pulseaudio pulseaudio-alsa pulseaudio-bluetooth mpd mpc ncmpcpp feh ttf-dejavu chromium libgnome-keyring lastpass-cli cifs-utils vlc highlight mutt htop unzip libbluray libaacs poppler okular imagemagick perl-image-exiftool w3m ffmpegthumbnailer xclip openssl emacs firefox zip dhclient xorg-xinput gdb strace intel-ucode patchelf
