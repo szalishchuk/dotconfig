@@ -22,7 +22,6 @@ menus
 QtProject.conf
 dconf/user
 credentials
-systemd
 vlc
 okularrc
 Mailspring/
@@ -35,3 +34,4 @@ xorg/Xresources
 RescueTime.com/
 libreoffice/
 okularpartrc
+systemd/user/default.target.wants
