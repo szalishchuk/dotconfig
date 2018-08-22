@@ -34,3 +34,6 @@ fi
 
 # Launch i3 window manager
 exec i3
+
+# Set desktop wallpaper
+feh --recursive --randomize --bg-scale /home/sviat/ownCloud/3.\ Home/Media/Wallpapers/* & 
