@@ -24,6 +24,7 @@
   # Set an alias for ncmpcpp, the acronym that I can never remember nor type in properly
   alias ncmpcpp=$HOME/.config/ncmpcpp/ncmpcpp
   alias ranger=$HOME/.config/ranger/ranger
+  alias e=$EDITOR
   # TODO
   # alias vim="mvim -v"
   alias preview=/Users/sviat/.config/bin/preview
