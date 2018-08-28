@@ -20,17 +20,17 @@
 			       (lambda (directory)
 				 (directory-files-recursively
 				  directory org-agenda-file-regexp))
-			       '("~/ownCloud"))))
+			       '("~/cloud"))))
 
 
 
 ;; Set default location for capturing misc notes
-(setq org-default-notes-file "~/ownCloud/!nbox/index.txt")
+(setq org-default-notes-file "~/cloud/!nbox/index.txt")
 
 
 (setq org-agenda-custom-commands
-      '(("X" agenda "" nil ("~/ownCloud/!nbox/agenda.html"))
-        ("Y" alltodo "" nil ("~/ownCloud/!nbox/todo.html"))))
+      '(("X" agenda "" nil ("~/cloud/!nbox/agenda.html"))
+        ("Y" alltodo "" nil ("~/cloud/!nbox/todo.html"))))
 
 
 ;; Configure agenda export settings
