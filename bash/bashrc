@@ -33,12 +33,10 @@
   alias slack-term="node /Users/sviat/.config/slack-term/slack-term"
   alias archey3="archey3 --config $HOME/.config/archey3.cfg" # Output Arch Linux logo and system information
   alias dmenu="rofi -dmenu"
+  alias wallpaper="feh --recursive --randomize --bg-scale /home/sviat/ownCloud/3.\ Home/Media/Wallpapers/*"
+
 
 ###---Functions---###
-  ## Sublime text
-  function sub {
-    open -a /Applications/Sublime\ Text.app $1
-  }
   ## Display docs of any format inside the terminal
   doc () {
     pandoc $1 | lynx -stdin
