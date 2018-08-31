@@ -4,6 +4,7 @@
   export XDG_CONFIG_HOME=$HOME/.config # Dotconfig dir
   export EDITOR="emacsclient -nw" # Default text editor
   export GPGKEY=E14771D03F56AF10 # Default public GPG key
+  export CLOUD="/home/sviat/cloud" # NextCloud directory path
 
   # Export MPD connection details for ncmpcpp and mpc clients to pick up
   export MPD_HOST=$HOME/.config/mpd/mpd.socket
@@ -33,8 +34,8 @@
   alias slack-term="node /Users/sviat/.config/slack-term/slack-term"
   alias archey3="archey3 --config $HOME/.config/archey3.cfg" # Output Arch Linux logo and system information
   alias dmenu="rofi -dmenu"
-  alias wallpaper="feh --recursive --randomize --bg-scale /home/sviat/ownCloud/3.\ Home/Media/Wallpapers/*"
-  alias connectToHome="sudo openvpn --config /home/sviat/cloud/Home/3.Home/Software/Systems/Common/OpenVPN/vpn1.home.sviat.co.ovpn --pull-filter ignore redirect-gateway"
+  alias wallpaper="feh --recursive --randomize --bg-scale $CLOUD/Home/3.Home/Media/Wallpapers/*"
+  alias connectToHome="sudo openvpn --config $CLOUD/Home/3.Home/Software/Systems/Common/OpenVPN/vpn1.home.sviat.co.ovpn --pull-filter ignore redirect-gateway"
 
 
 ###---Functions---###
