@@ -8,9 +8,9 @@ _rofi () {
 # general variables
 
 # the path where images, videos and pastes should be saved
-img_path=$HOME/ownCloud/!nbox/Screenshots
-vid_path=$HOME/ownCloud/!nbox/Screencasts
-paste_path=$HOME/ownCloud/!nbox/Screenshots
+img_path=$CLOUD/Home/!nbox/Screenshots
+vid_path=$CLOUD/Home/!nbox/Screencasts
+paste_path=$CLOUD/Home/!nbox/Screenshots
 
 # set viewer for images and videos plus editor for images
 viewer=feh
