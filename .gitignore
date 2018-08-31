@@ -36,3 +36,4 @@ libreoffice/
 okularpartrc
 systemd/user/default.target.wants
 qutebrowser/
+rclone/
