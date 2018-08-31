@@ -2,7 +2,7 @@
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
   # Navigate to the default folder
-  cd $HOME/ownCloud
+  cd $HOME/cloud
   # Launch original ranger exec
   /usr/bin/ranger
 elif [[ "$OSTYPE" == "darwin"* ]]; then
