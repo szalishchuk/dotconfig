@@ -15,22 +15,17 @@
 (setq org-agenda-file-regexp "\\`[^.].*\\.txt\\'")
 
 ;; Recursively add all files from target directory to agenda
-(setq org-agenda-files (apply 'append
-			      (mapcar
-			       (lambda (directory)
-				 (directory-files-recursively
-				  directory org-agenda-file-regexp))
-			       '("~/cloud"))))
-
-
+(setq org-agenda-files
+      (directory-files-recursively (format "%s/%s" (getenv "CLOUD") "/Home")
+				   org-agenda-file-regexp))
 
 ;; Set default location for capturing misc notes
-(setq org-default-notes-file "~/cloud/!nbox/index.txt")
+(setq org-default-notes-file (format "%s/%s" (getenv "CLOUD") "/Home/!nbox/index.txt"))
 
 
 (setq org-agenda-custom-commands
-      '(("X" agenda "" nil ("~/cloud/!nbox/agenda.html"))
-        ("Y" alltodo "" nil ("~/cloud/!nbox/todo.html"))))
+      '(("X" agenda "" nil (format "%s/%s" (getenv "CLOUD") "/Home/!nbox/agenda.html"))
+        ("Y" alltodo "" nil (format "%s/%s" (getenv "CLOUD") "/Home/!nbox/todo.html"))))
 
 
 ;; Configure agenda export settings

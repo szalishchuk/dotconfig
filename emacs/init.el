@@ -3,6 +3,13 @@
 (package-initialize)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 
+;; Extract path variables from shell
+(exec-path-from-shell-copy-env "CLOUD")
+
+;; Provision the runtime with the extracted variables
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
 ;; Line numbers settings
 (load-file "~/.config/emacs/linum.el")
 
@@ -48,7 +55,7 @@
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(custom-enabled-themes (quote (misterioso)))
- '(package-selected-packages (quote (xclip evil htmlize))))
+ '(package-selected-packages (quote (exec-path-from-shell xclip evil htmlize))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
