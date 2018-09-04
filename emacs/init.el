@@ -43,6 +43,9 @@
 ;; Store all backups files in the following directory
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 
+;; Store all auto-save files in one directory
+(setq auto-save-file-name-transforms '((".*" "~/.emacs.d/saves/" t)))
+
 ;; Load themes from theme directory
 (add-to-list 'custom-theme-load-path "~/.config/themes/") 
 
