@@ -17,7 +17,7 @@
 
 ;; Recursively add all files from target directory to agenda
 (setq org-agenda-files
-      (directory-files-recursively (format "%s/%s" (getenv "CLOUD") "/Home")
+      (directory-files-recursively (format "%s/%s" (getenv "CLOUD") "/Home/Org")
 				   org-agenda-file-regexp))
 
 ;; Set default location for capturing misc notes

@@ -4,7 +4,7 @@
   export XDG_CONFIG_HOME=$HOME/.config # Dotconfig dir
   export EDITOR="emacsclient -nw" # Default text editor
   export GPGKEY=E14771D03F56AF10 # Default public GPG key
-  export CLOUD="/home/sviat/cloud" # NextCloud directory path
+  export CLOUD="/home/sviat/Cloud" # NextCloud directory path
 
   # Export MPD connection details for ncmpcpp and mpc clients to pick up
   export MPD_HOST=$HOME/.config/mpd/mpd.socket
