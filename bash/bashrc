@@ -34,7 +34,7 @@
   alias slack-term="node /Users/sviat/.config/slack-term/slack-term"
   alias archey3="archey3 --config $HOME/.config/archey3.cfg" # Output Arch Linux logo and system information
   alias dmenu="rofi -dmenu"
-  alias wallpaper="feh --recursive --randomize --bg-scale $CLOUD/Home/3.Home/Media/Wallpapers/*"
+  alias wallpaper="feh --recursive --randomize --bg-scale $CLOUD/Home/Org/Home/Media/Wallpapers/*"
   alias connectToHome="sudo openvpn --config $CLOUD/Home/3.Home/Software/Systems/Common/OpenVPN/vpn1.home.sviat.co.ovpn --pull-filter ignore redirect-gateway"
 
 
