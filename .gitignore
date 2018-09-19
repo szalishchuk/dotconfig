@@ -10,6 +10,7 @@ mpd/mpd.pid
 mpd/mpd.db
 mpd/mpd.state
 mpd/sticker.sql
+ncmpcpp/error.log
 slack-term/com.config.json
 Slack
 autostart
