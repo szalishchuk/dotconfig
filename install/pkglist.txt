@@ -98,7 +98,6 @@ package-query
 pacman
 patch
 pciutils
-pcmciautils
 perl
 perl-image-exiftool
 pkgconf
