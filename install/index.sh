@@ -18,3 +18,6 @@ exec $HOME/.config/install/sound.sh
 
 # Configure emacs
 exec $HOME/.config/install/emacs.sh
+
+# Configure locales
+exec $HOME/.config/install/locale.sh
