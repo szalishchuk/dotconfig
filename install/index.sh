@@ -13,3 +13,8 @@ git clone https://github.com/sviatco/dotconfig
 # Create a public rsa key
 ssh-keygen
 
+# Configure the sound
+exec $HOME/.config/install/sound.sh
+
+# Configure emacs
+exec $HOME/.config/install/emacs.sh
