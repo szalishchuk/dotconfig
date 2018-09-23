@@ -11,6 +11,7 @@
 
   export MPD_PORT=6600
   export hosts=/private/etc/hosts
+  export TERMINAL=urxvt
 
   # TODO:
   # export PATH=$(brew --prefix openvpn)/sbin:$PATH
@@ -35,7 +36,7 @@
   alias archey3="archey3 --config $HOME/.config/archey3.cfg" # Output Arch Linux logo and system information
   alias dmenu="rofi -dmenu"
   alias wallpaper="feh --recursive --randomize --bg-scale $CLOUD/Home/Org/Home/Media/Wallpapers/*"
-  alias connectToHome="sudo openvpn --config $CLOUD/Home/3.Home/Software/Systems/Common/OpenVPN/vpn1.home.sviat.co.ovpn --pull-filter ignore redirect-gateway"
+  alias connectToHome="sudo openvpn --config $CLOUD/Home/Org/Home/Software/Systems/Common/OpenVPN/vpn1.home.sviat.co.ovpn --pull-filter ignore redirect-gateway"
 
 
 ###---Functions---###
