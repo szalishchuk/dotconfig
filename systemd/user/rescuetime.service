@@ -1,0 +1,11 @@
+[Unit]
+Description=Rescuetime time tracker
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rescuetime
+ExecStop=killall rescuetime
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
