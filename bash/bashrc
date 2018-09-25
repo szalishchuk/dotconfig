@@ -3,6 +3,7 @@
 ###---Global variables---###
   export XDG_CONFIG_HOME=$HOME/.config # Dotconfig dir
   export EDITOR="emacsclient -nw" # Default text editor
+  export TERMINAL="urxvt" # Default terminal emulator
   export GPGKEY=E14771D03F56AF10 # Default public GPG key
   export CLOUD="/home/sviat/Cloud" # NextCloud directory path
 
@@ -11,6 +12,10 @@
 
   export MPD_PORT=6600
   export hosts=/private/etc/hosts
+
+  # TODO: Configure these values to be dependant on the machine used
+  export monitor1="DP-1"
+  export monitor2="HDMI-0"
 
   # TODO:
   # export PATH=$(brew --prefix openvpn)/sbin:$PATH
