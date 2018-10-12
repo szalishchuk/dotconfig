@@ -1,0 +1,10 @@
+[Unit]
+Description=Daemon for xflux
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/xflux -l 49.8130944 -g 49.8130944 -k 5000
+Restart=always
+
+[Install]
+WantedBy=default.target
