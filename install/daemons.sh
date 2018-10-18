@@ -9,3 +9,7 @@ timedatectl set-ntp true
 # Start emacs server to run as a daemon
 systemctl enable --user emacs
 systemctl start --user emacs
+
+# Start flux service
+systemctl --user start xfluxd
+systemctl --user enable xfluxd
