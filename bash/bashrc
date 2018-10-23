@@ -8,22 +8,6 @@
   alias grep="grep --color=auto" # Color grep - highlight desired sequence
   alias ccat="highlight --out-format=ansi" # Color cat - print file with syntax highlighting
 	
-###---Global variables---###
-  export XDG_CONFIG_HOME=$HOME/.config # Dotconfig dir
-  export EDITOR="emacsclient -nw" # Default text editor
-  export GPGKEY=E14771D03F56AF10 # Default public GPG key
-  export CLOUD="/home/sviat/Cloud" # NextCloud directory path
-
-  # Export MPD connection details for ncmpcpp and mpc clients to pick up
-  export MPD_HOST=$HOME/.config/mpd/mpd.socket
-
-  export MPD_PORT=6600
-  export hosts=/private/etc/hosts
-  export TERMINAL=urxvt
-
-  # TODO:
-  # export PATH=$(brew --prefix openvpn)/sbin:$PATH
-
   # TODO:
   export NVM_DIR="/Users/sviat/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
