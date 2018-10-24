@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "ansimd": "^0.2.1",
+    "indium": "^3.3.1",
     "iterm2-tab-set": "^0.7.1"
   }
 }
