@@ -24,11 +24,27 @@
 (setq org-default-notes-file (format "%s/%s" (getenv "CLOUD") "/Home/!nbox/index.txt"))
 
 ;; Define statuses for TODO items
+;; TODO define other issue types in use
 (setq org-todo-keywords
       '((sequence "TODO" "IN-PROGRESS" "WAITING" "|" "DONE" "DELEGATED" "CANCELLED")))
 
+;; Customize visual looks of statuses
+(setq org-todo-keyword-faces
+      '(
+     ("TODO" .        (:foreground "#fc2302" ))
+     ("IN-PROGRESS" . (:foreground "#fc2302" :background "#f0fc0a"))
+     ("WAITING" .     (:foreground "#fc2302" :background "#fc8805"))
+     ("DONE" .        (:foreground "white"   :background "#00891d"))
+     ("DELEGATED" .   (:foreground "white"   :background "#d902ed"))
+     ("CANCELLED" .   (:foreground "#fc2302" :background "#9ea39e"))
+       )
+      )
+
 ;; Force DONE items to show up in the agenda view
 (setq org-agenda-log-mode-items '(closed clock state))
+
+;; Prompt for a note when resolving regular todos
+(setq org-log-done 'note)
 
 ;; Prompt for a note when resolving repeated events
 (setq org-log-repeat 'note)
