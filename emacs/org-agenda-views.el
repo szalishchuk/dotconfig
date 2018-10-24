@@ -5,7 +5,7 @@
 	     '("u" "Unscheduled TODOs"
 	       ((todo ""
 		      ((org-agenda-overriding-header "\nUnscheduled TODO")
-		       (org-agenda-skip-function '(org-agenda-skip-entry-if 'timestamp 'todo '("CANCELLED" "DONE"))))))) t)
+		       (org-agenda-skip-function '(org-agenda-skip-entry-if 'timestamp 'todo '("DONE" "DELEGATED" "CANCELLED"))))))) t)
 
 ;; All tasks grouped by priority
 (add-to-list 'org-agenda-custom-commands
@@ -13,17 +13,17 @@
 
 	       ((tags-todo "PRIORITY=\"\""
                            ((org-agenda-overriding-header "NONE")
-                            (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled 'todo '("WAITING" "CANCELLED" "DONE")))))
+                            (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled 'todo '("WAITING" "DONE" "DELEGATED" "CANCELLED")))))
 
 		(tags-todo "PRIORITY={A}"
                            ((org-agenda-overriding-header "HIGH")
-                            (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled 'todo '("WAITING" "CANCELLED" "DONE")))))
+                            (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled 'todo '("WAITING" "DONE" "DELEGATED" "CANCELLED")))))
 		(tags-todo "PRIORITY={B}"
                            ((org-agenda-overriding-header "MEDIUM")
-                            (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled 'todo '("WAITING" "CANCELLED" "DONE")))))
+                            (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled 'todo '("WAITING" "DONE" "DELEGATED" "CANCELLED")))))
 		(tags-todo "PRIORITY={C}"
                            ((org-agenda-overriding-header "LOW")
-                            (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled 'todo '("WAITING" "CANCELLED" "DONE")))))
+                            (org-agenda-skip-function '(org-agenda-skip-entry-if 'deadline 'scheduled 'todo '("WAITING" "DONE" "DELEGATED" "CANCELLED")))))
                 (todo "DONE|CANCELLED"
                       ((org-agenda-overriding-header "COMPLETED")
                        (org-agenda-sorting-strategy '(priority-down)))))) t)

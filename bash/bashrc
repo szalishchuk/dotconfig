@@ -1,31 +1,16 @@
 #!/bin/bash
 
-###---Global variables---###
-  export XDG_CONFIG_HOME=$HOME/.config # Dotconfig dir
-  export EDITOR="emacsclient -nw" # Default text editor
-  export TERMINAL="urxvt" # Default terminal emulator
-  export GPGKEY=E14771D03F56AF10 # Default public GPG key
-  export CLOUD="/home/sviat/Cloud" # NextCloud directory path
-
-  # Export MPD connection details for ncmpcpp and mpc clients to pick up
-  export MPD_HOST=$HOME/.config/mpd/mpd.socket
-
-  export MPD_PORT=6600
-  export hosts=/private/etc/hosts
-  export TERMINAL=urxvt
-
   # TODO: Configure these values to be dependant on the machine used
   export monitor1="DP-1"
   export monitor2="HDMI-0"
 
-  # TODO:
-  # export PATH=$(brew --prefix openvpn)/sbin:$PATH
-
-  # TODO:
-  export NVM_DIR="/Users/sviat/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-
+###---Configuration---###
+  shopt -s autocd # Allows to cd into directory by typing it's name
+  export PS1="${debian_chroot:+($debian_chroot)}\[\033[00;36m\]⚈ \[\033[01;33m\]\W\[\033[00m\] " # Customize bash prompt
+  alias ls="ls -hN --color=auto --group-directories-first" # Customize ls output
+  alias grep="grep --color=auto" # Color grep - highlight desired sequence
+  alias ccat="highlight --out-format=ansi" # Color cat - print file with syntax highlighting
+	
 ###---Aliases---###
 
   # Set an alias for ncmpcpp, the acronym that I can never remember nor type in properly

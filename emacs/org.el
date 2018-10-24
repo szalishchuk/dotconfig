@@ -25,7 +25,7 @@
 
 ;; Define statuses for TODO items
 (setq org-todo-keywords
-      '((sequence "TODO" "IN-PROGRESS" "WAITING" "CANCELLED" "DONE")))
+      '((sequence "TODO" "IN-PROGRESS" "WAITING" "|" "DONE" "DELEGATED" "CANCELLED")))
 
 ;; Force DONE items to show up in the agenda view
 (setq org-agenda-log-mode-items '(closed clock state))
