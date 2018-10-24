@@ -58,7 +58,7 @@
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(custom-enabled-themes (quote (misterioso)))
- '(package-selected-packages (quote (exec-path-from-shell xclip evil htmlize))))
+ '(package-selected-packages (quote (indium exec-path-from-shell xclip evil htmlize))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
