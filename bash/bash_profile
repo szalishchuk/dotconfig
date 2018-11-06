@@ -5,8 +5,9 @@
 export PATH="$PATH:$HOME/.config/bin"
 export TERMINAL="urxvt"
 export EDITOR="emacsclient -nw" # Default text editor      
-export GPGKEY="E14771D03F56AF10" # Default public GPG key    
-export CLOUD="/home/sviat/Cloud" # NextCloud directory path
+export GPGKEY="E14771D03F56AF10" # Default public GPG key
+export CLOUD=$([ "$OSTYPE" == "linux-gnu" ] && echo "/home/sviat/Cloud" || echo "/Users/sviat/Cloud") # Set different Cloud/ paths depending on the user.
+# TODO Should fix this on the emacs configuration level to use $HOME environment variable instead
 export XDG_CONFIG_HOME=$HOME/.config # Dotconfig dir       
 export hosts=/private/etc/hosts
 export MPD_HOST=$HOME/.config/mpd/mpd.socket # MPD connection host
@@ -31,8 +32,11 @@ if [ -z "$UBUNTU_MENUPROXY" ]
 fi
 
 ###---Enable NVM---###
-export NVM_DIR="$HOME/.nvm"
-source /usr/share/nvm/nvm.sh
-source /usr/share/nvm/bash_completion
-source /usr/share/nvm/install-nvm-exec
+if [[ "$OSTYPE" == "linux-gnu" ]]
+then
+  export NVM_DIR="$HOME/.nvm"
+  source /usr/share/nvm/nvm.sh
+  source /usr/share/nvm/bash_completion
+  source /usr/share/nvm/install-nvm-exec
+fi
 ###---End of Enable NVM---###
