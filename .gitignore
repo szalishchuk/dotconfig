@@ -39,3 +39,5 @@ systemd/user/default.target.wants
 qutebrowser/
 rclone/
 configstore/update-notifier-npm.json
+Nextcloud/
+nautilus

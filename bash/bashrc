@@ -4,10 +4,10 @@
   export monitor1="DP-1"
   export monitor2="HDMI-0"
 
-###---Configuration---###
-  shopt -s autocd # Allows to cd into directory by typing it's name
+  ###---Configuration---###
   export PS1="${debian_chroot:+($debian_chroot)}\[\033[00;36m\]⚈ \[\033[01;33m\]\W\[\033[00m\] " # Customize bash prompt
-  alias ls="ls -hN --color=auto --group-directories-first" # Customize ls output
+  [[ "$OSTYPE" == "linux-gnu" ]] && shopt -s autocd # Allows to cd into directory by typing it's name
+  [[ "$OSTYPE" == "linux-gnu" ]] && alias ls="ls -hN --color=auto --group-directories-first" # Customize ls output
   alias grep="grep --color=auto" # Color grep - highlight desired sequence
   alias ccat="highlight --out-format=ansi" # Color cat - print file with syntax highlighting
 	

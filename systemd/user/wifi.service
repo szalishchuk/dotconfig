@@ -1,0 +1,17 @@
+[Unit]
+Description=Wireless Networking
+After=suspend.target
+After=hybrid-sleep.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+
+ExecStart=sleep 1
+ExecStart=sudo /usr/bin/wpa_supplicant -B -D wext -i wlp2s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf
+ExecStart=sudo /usr/bin/dhclient wlp2s0
+
+[Install]
+WantedBy=multi-user.target
+WantedBy=suspend.target
+WantedBy=hybrid-sleep.target

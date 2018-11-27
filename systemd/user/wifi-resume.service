@@ -1,0 +1,14 @@
+[Unit]
+Description=Resume Network after Sleep
+After=suspend.target
+After=hybrid-sleep.target
+
+[Service]
+Type=forking
+RemainAfterExit=yes
+
+ExecStart=systemctl --user restart wifi
+
+[Install]
+WantedBy=suspend.target
+WantedBy=hybrid-sleep.target
