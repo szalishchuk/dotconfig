@@ -1,0 +1,11 @@
+[Unit]
+Description=Daemon for Redshift
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/redshift -v -t 5000:5000 -l 49.8130944:49.8130944
+ExecStop=killall redshift
+Restart=always
+
+[Install]
+WantedBy=default.target
