@@ -41,3 +41,8 @@ rclone/
 configstore/update-notifier-npm.json
 Nextcloud/
 nautilus
+VirtualBox/
+kglobalshortcutsrc
+konversationrc
+rclone-browser/
+teiler/
