@@ -13,11 +13,16 @@
 /* Hide Tree Style Tab sidebar
  * https://github.com/piroor/treestyletab/issues/1397
  */
-
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
   display: none;
 }
 
 #sidebar-box + #sidebar-splitter {
   width: 1px !important;	
+}
+
+
+/* Hide the titlebar and browser tabs by moving them out of the frame, urlbar will then be displayed at the top of the window */
+#titlebar, #tabbrowser-tabs {
+  margin: -10px !important;
 }
