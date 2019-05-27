@@ -24,5 +24,5 @@
 
 /* Hide the titlebar and browser tabs by moving them out of the frame, urlbar will then be displayed at the top of the window */
 #titlebar, #tabbrowser-tabs {
-  margin: -10px !important;
+  margin: 0px !important;
 }

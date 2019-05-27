@@ -46,8 +46,7 @@ Xft.rgba: 	 none
 URxvt.intensityStyles:	false
 URxvt.background: [80]#000000
 URxvt.depth:		32
-URxvt.font: 		xft:monospace:size=11:antialias=true
-URxvt.letterSpace: 	0
+URxvt.font: 		xft:monospace:size=11:antialias=true, xft:IosevkaNerdFont:size=16
 URxvt.scrollBar:	false
 URxvt.cursorColor:	white
 
