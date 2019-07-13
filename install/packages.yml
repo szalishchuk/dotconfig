@@ -1,0 +1,390 @@
+# System dependencies
+#
+
+- package: autoconf
+  description: A GNU tool for automatically configuring source code
+  install_with: yay
+
+- package: automake
+  description: A GNU tool for automatically creating Makefiles
+  install_with: yay
+
+- package: bash
+  description: The GNU Bourne Again shell
+  install_with: binutils
+
+- package: binutils
+  description: A set of programs to assemble and manipulate binary and object files
+  install_with: yay
+
+- package: bison
+  description: The GNU general-purpose parser generator
+  install_with: yay
+
+- package: bluez-utils
+  description: Development and debugging utilities for the bluetooth protocol stack
+  install_with: yay
+
+- package: bzip2
+  description: A high-quality data compression program
+  install_with: yay
+
+- package: chromium
+  description: web browser, open source version that Google Chrome derives from
+  install_with: yay
+
+- package: cifs-utils
+  description: helps with mounting smb shares
+  install_with: yay
+
+- package: compton
+  description: Standalone compositor to provide transitions when navigating between windows
+  install_with: yay
+
+- package: coreutils
+  description: The basic file, shell and text manipulation utilities of the GNU operating system
+  install_with: yay
+
+- package: cryptsetup
+  description: Userspace setup tool for transparent encryption of block devices using dm-crypt
+  install_with: yay
+
+- package: device-mapper
+  description: Device mapper userspace library and tools
+  install_with: yay
+
+- package: dhclient
+  description: alternative to dhcpcd allowing system to request the ip address after connecting to the network
+  install_with: yay
+
+- package: dhcpcd
+  description: RFC2131 compliant DHCP client daemon
+  install_with: yay
+
+- package: diffutils
+  description: Utility programs used for creating patch files
+  install_with: yay
+
+- package: e2fsprogs
+  description: Ext2/3/4 filesystem utilities
+  install_with: yay
+
+- package: emacs
+  description: primary text editor
+  install_with: yay
+
+- package: fakeroot
+  description: Tool for simulating superuser privileges
+  install_with: yay
+
+- package: feh
+  description: image viewer
+  install_with: yay
+
+- package: ffmpegthumbnailer
+  description: convert first frame of the video into an image to diplay as thumbnail
+  install_with: yay
+
+- package: file
+  description: File type identification utility
+  install_with: yay
+
+- package: filesystem
+  description: Base Arch Linux files
+  install_with: yay
+
+- package: findutils
+  description: GNU utilities to locate files
+  install_with: yay
+
+- package: firefox
+  description: primary web browser
+  install_with: yay
+
+- package: flex
+  description: A tool for generating text-scanning programs
+  install_with: yay
+
+- package: gawk
+  description: GNU version of awk
+  install_with: yay
+
+- package: gcc
+  description: The GNU Compiler Collection - C and C++ frontends
+  install_with: yay
+
+- package: gcc-libs
+  description: Runtime libraries shipped by GCC
+  install_with: yay
+
+  # To process
+
+  gdb 8.2.1-3
+gettext 0.19.8.1-3
+git 2.21.0-1
+glibc 2.29-1
+go 2:1.12.4-1
+go-tools 2:1.12+2915+49d818b07-1
+grep 3.3-1
+groff 1.22.4-1
+gvim 8.1.1186-1
+gzip 1.10-1
+highlight 3.51-1
+htop 2.2.0-2
+i3-gaps 4.16.1-1
+i3lock-fancy-dualmonitors-git r91.f85e364-1
+imagemagick 7.0.8.45-1
+inetutils 1.9.4-7
+intel-ucode 20190514.a-1
+iproute2 5.1.0-1
+iputils 20180629.f6aac8d-4
+jfsutils 1.1.15-6
+lastpass-cli 1.3.3-1
+less 530-1
+libaacs 0.9.0-3
+libbluray 1.1.1-1
+libgnome-keyring 3.12.0+11+g3766bcc-1
+libtool 2.4.6+42+gb88cebd5-3
+licenses 20181104-1
+linux 5.1.2.arch1-1
+linux-firmware 20190424.4b6cf2b-1
+logrotate 3.15.0-1
+lvm2 2.02.184-4
+m4 1.4.18-2
+make 4.2.1-3
+man-db 2.8.5-2
+man-pages 5.01-1
+mdadm 4.1-1
+mpc 0.31-1
+mpd 0.21.8-1
+mutt 1.11.4-1
+nano 4.2-1
+ncmpcpp 0.8.2-8
+nerd-fonts-iosevka 2.0.0-2
+netctl 1.20-1
+nodejs 11.15.0-1
+nvidia 430.14-1
+okular 19.04.1-1
+openvpn 2.4.7-1
+pacman 5.1.3-1
+patch 2.7.6-7
+patchelf 0.9-2
+pciutils 3.6.2-1
+perl 5.28.2-1
+perl-image-exiftool 11.30-1
+pkgconf 1.6.1-1
+poppler 0.76.1-1
+procps-ng 3.3.15-1
+psmisc 23.2-1
+pulseaudio 12.2-2
+pulseaudio-alsa 2-4
+pulseaudio-bluetooth 12.2-2
+python 3.7.3-1
+python-dbus 1.2.8-2
+ranger 1.9.2-1
+reiserfsprogs 3.6.27-2
+rofi 1.5.2-1
+s-nail 14.9.13-2
+sed 4.7-1
+shadow 4.6-2
+siji-git r23.c691f20-1
+snapd 2.39-2
+strace 5.0-1
+sudo 1.8.27-1
+sysfsutils 2.1.0-10
+systemd 242.29-1
+systemd-sysvcompat 242.29-1
+tar 1.32-1
+termsyn-font 1.8.7-1
+texinfo 6.6-1
+ttf-dejavu 2.37-2
+unzip 6.0-13
+usbutils 010-1
+util-linux 2.33.2-1
+vi 1:070224-3
+visual-studio-code-bin 1.35.1-1
+vlc 3.0.6-11
+w3m 0.5.3.git20190105-1
+which 2.21-3
+xclip 0.13-2
+xfsprogs 4.20.0-2
+xorg-server 1.20.4-1
+xorg-xdpyinfo 1.3.2-2
+xorg-xinit 1.4.1-1
+xorg-xinput 1.6.2-2
+zip 3.0-8
+
+
+  #
+  # End of processing queue
+
+
+
+
+
+- package: ranger
+  description: Console-based file manager
+  install_with: yay
+
+- package: rofi
+  description: A window switcher, application launcher and dmenu replacement
+  install_with: yay
+
+- package: git
+  description: Git client
+  install_with: yay
+
+- package: gvim
+  description: On native vim in Arch there is no support for X so the +clipboard feature is missing, replace it with gvim.
+  install_with: yay
+
+
+- package: nodejs
+  description: NodeJS runtime
+  install_with: yay
+
+
+- package: python
+  description: Python runtime
+  install_with: yay
+
+
+- package: python-dbus
+  desription: Python binding for dbus
+  install_with: yay
+
+
+- package: pulseaudio
+  description: General-purpose sound server
+  install_with: yay
+
+
+- package: pulseaudio-alsa
+  description: ALSA Configuration for PulseAudio
+  install_with: yay
+
+
+- package: pulseaudio-bluetooth
+  description: Bluetooth support for PulseAudio
+  install_with: yay
+
+
+- package: mpd
+  description: music player daemon
+  install_with: yay
+
+
+- package: mpc
+  description: headless music player controlling playback with mpd
+  install_with: yay
+
+
+- package: ncmpcpp
+  description: terminal GUI music player with playlist support, tag editor and other features, connecting to mpd for music playback
+  install_with: yay
+
+- package: feh
+  description: image viewer
+  install_with: yay
+
+- package: ttf-dejavu
+  description: fullfills some of the missing unicode symbols
+  install_with: yay
+
+
+- package: libgnome-keyring
+  description: keychain service to store entered passwords
+  install_with: yay
+
+- package: lastpass-cli
+  description: lastpass terminal client
+  install_with: yay
+
+
+- package: vlc
+  description: primary GUI-based media player
+  install_with: yay
+
+- package: highlight
+  description: syntax highlighting engine used in ranger's preview
+  install_with: yay
+
+- package: mutt
+  description: terminal email client
+  install_with: yay
+
+- package: htop
+  description: interactive process viewer
+  install_with: yay
+
+- package: unzip
+  description: extract contents of zip archives
+  install_with: yay
+
+- package: libbluray
+  description: 
+  install_with: yay
+
+- package: libaacs
+  description:
+  install_with: yay
+
+- package: poppler
+  description: PDF rendering library
+  install_with: yay
+
+- package: okular
+  description: PDF document viewer
+  install_with: yay
+
+- package: imagemagick
+  description: create, edit, compose, or convert bitmap images
+  install_with: yay
+
+- package: perl-image-exiftool
+  description: Reader and rewriter of EXIF informations that supports raw files
+  install_with: yay
+
+- package: w3m
+  description: terminal web browser
+  install_with: yay
+
+
+- package: xclip
+  description: interface on top of X11 clipboard
+  install_with: yay
+
+- package: openssl
+  description: full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols
+  install_with: yay
+
+- package: firefox
+  description: primary web browser
+  install_with: yay
+
+- package: zip
+  description: utilitiy to compress to and extract from zip archives
+  install_with: yay
+
+
+- package: xorg-xinput
+  description: Small commandline tool to configure devices
+  install_with: yay
+
+- package: gdb
+  description: ancient and well-tested debugger
+  install_with: yay
+
+- package: strace
+  description: debugs application dependencies
+  install_with: yay
+
+- package: intel-ucode
+  description: Microcode update files for Intel CPUs
+  install_with: yay
+
+- package: patchelf
+  description: modify properties of ELF executables
+  install_with: yay
+
+# App Images 
