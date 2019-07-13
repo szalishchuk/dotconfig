@@ -3,6 +3,15 @@
 (package-initialize)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 
+;; Ensure installation of use-package
+(if (not (package-installed-p 'use-package))
+    (progn
+      (package-refresh-contents)
+      (package-install 'use-package)))
+
+;; Enable use-package that will ensure installation of other packages
+(require 'use-package)
+
 ;; Extract path variables from shell
 (exec-path-from-shell-copy-env "CLOUD")
 
@@ -18,6 +27,9 @@
 
 ;; Enable org-mode and related configuration
 (load-file "~/.config/emacs/org.el")
+
+;; Enable typescript support in appropriate files with tide
+(load-file "~/.config/emacs/tide.el")
 
 ;; Enable wrapping of long-lines
 (setq org-startup-truncated nil)
@@ -58,7 +70,9 @@
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(custom-enabled-themes (quote (misterioso)))
- '(package-selected-packages (quote (indium exec-path-from-shell xclip evil htmlize))))
+ '(package-selected-packages
+   (quote
+    (company web-mode tide indium exec-path-from-shell xclip evil htmlize))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
