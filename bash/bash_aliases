@@ -1,0 +1,11 @@
+#!/bin/bash
+
+alias e=$EDITOR
+alias ranger=$HOME/.config/ranger/ranger
+alias xclip='xclip -selection c' # Needed to simplify the process of copying STDOUT into system clipboard (e.g. ls | xclip)
+alias dmenu="rofi -dmenu"
+alias wallpaper="feh --recursive --randomize --bg-scale $CLOUD/Home/Org/Home/Media/Wallpapers/*"
+alias connectToHome="sudo openvpn --config $CLOUD/Home/Org/Home/Software/Systems/Common/OpenVPN/vpn1.home.sviat.co.ovpn --pull-filter ignore redirect-gateway"
+alias ff="find "$(cd ..; pwd)" -name ${1}"
+alias pacman-reinstall="sudo pacman -Sy `pacman -Q | awk '{print $1}'`"
+
