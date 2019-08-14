@@ -90,7 +90,7 @@
  '(custom-enabled-themes (quote (misterioso)))
  '(package-selected-packages
    (quote
-    (company web-mode tide indium exec-path-from-shell xclip evil htmlize))))
+    (eldoc-box company web-mode tide indium exec-path-from-shell xclip evil htmlize))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
