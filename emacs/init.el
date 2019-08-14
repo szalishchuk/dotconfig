@@ -38,7 +38,7 @@
   :init (setq evil-want-C-i-jump nil)
   :config (evil-mode 1))
 
-(use-package xclip
+(use-package xclip :defer t
   :load-path "~/.config/emacs/packages/xclip-1.9.el"
   :config (xclip-mode 1))
 
