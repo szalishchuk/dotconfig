@@ -39,13 +39,13 @@
   (local-set-key (quote [f5])  'tide-error-at-point) ; Show details of the error at point
   (local-set-key (quote [f6])  'tide-jsdoc-template) ; Insert JSDOC comment template at point
   (local-set-key (quote [f9])  'tide-references) ; List all references to the symbol at point in a buffer. References can be navigated using n and p. Press RET to open the file.
+  (local-set-key (quote [f11]) 'tide-jump-back) ; Return to your pre-jump position.
   (local-set-key (quote [f12]) 'tide-jump-to-definition) ; Jump to the definition of the symbol at point. With a prefix arg, Jump to the type definition.
 
   ;; Customize shortcuts - act on file
   (local-set-key (kbd "<C-f1>") 'tide-organize-imports) ; Organize imports in the file
   (local-set-key (kbd "<C-f2>") 'tide-rename-file) ; Rename current file and all it's references in other files
   (local-set-key (kbd "<C-f5>") 'tide-project-errors) ; List all errors in the project. Errors can be navigated using n and p. Press RET to open the file.
-  (local-set-key (kbd "<C-f12>") 'tide-jump-back) ; Return to your pre-jump position.
 
 )
 
