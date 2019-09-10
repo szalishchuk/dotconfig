@@ -47,3 +47,5 @@ konversationrc
 rclone-browser/
 teiler/
 Code/
+polybar/modules/pomodoro/pomodoro.db
+polybar/modules/pomodoro/pomodoro.output
