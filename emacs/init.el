@@ -1,7 +1,9 @@
 ;; Enable package management
 (require 'package)
 (package-initialize)
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")))
+(package-refresh-contents)
 
 ;; Ensure installation of use-package
 (if (not (package-installed-p 'use-package))
@@ -11,6 +13,14 @@
 
 ;; Enable use-package that will ensure installation of other packages
 (require 'use-package)
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
+
+(use-package auto-package-update
+  :config
+  (setq auto-package-update-delete-old-versions t)
+  (setq auto-package-update-hide-results t)
+  (auto-package-update-maybe))
 
 ;; Extract path variables from shell
 (exec-path-from-shell-copy-env "CLOUD")
@@ -23,7 +33,15 @@
 (load-file "~/.config/emacs/linum.el")
 
 ;; Enable evil-mode and related configuration
-(load-file "~/.config/emacs/evil.el")
+(use-package evil
+  ;; Enable tab in normal mode
+  :init (setq evil-want-C-i-jump nil)
+  :config (evil-mode 1))
+
+(use-package xclip :defer t
+  :load-path "~/.config/emacs/packages/xclip-1.9.el"
+  :config (xclip-mode 1))
+
 
 ;; Enable org-mode and related configuration
 (load-file "~/.config/emacs/org.el")
@@ -72,7 +90,7 @@
  '(custom-enabled-themes (quote (misterioso)))
  '(package-selected-packages
    (quote
-    (company web-mode tide indium exec-path-from-shell xclip evil htmlize))))
+    (eldoc-box company web-mode tide indium exec-path-from-shell xclip evil htmlize))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -62,6 +62,7 @@
               (setup-tide-mode))))
 
 ;; enable typescript-tslint checker
+(require 'flycheck)
 (flycheck-add-mode 'typescript-tslint 'web-mode)
 
 
